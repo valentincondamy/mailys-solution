@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b0e" />
+    <meta name="description" content="Trajectoire de migration WINDEV pilotée pour la gouvernance : précadrage et cadrage du module pilote offerts, cartographie du patrimoine, scénarios chiffrés, restitution en comité" />
+    <title>Sortir de WINDEV sans perdre la maîtrise | Mailys Solutions</title>
+    <link rel="preload" as="image" href="outputs/assets/logo-mailys-original.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=fixed-screens-1" />
+    <script src="script.js?v=fixed-screens-1" defer></script>
+    <noscript><style>#intro,#play,.screen-controls{display:none!important}#destination[hidden]{display:grid!important}.screen-stage .screen{display:none!important}.screen-stage:has(.screen:target) .screen:target,.screen-stage:not(:has(.screen:target)) #accueil{display:flex!important}</style></noscript>
+  </head>
+  <body>
+    <svg class="brand-definitions" width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="brand-ink" color-interpolation-filters="sRGB">
+          <feColorMatrix type="matrix" values="0 0 0 0 .956862745  0 0 0 0 .945098039  0 0 0 0 .921568627  0 0 0 1 0" />
+        </filter>
+        <linearGradient id="brand-warm" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#FF6B6B" />
+          <stop offset=".5" stop-color="#E11D2A" />
+          <stop offset="1" stop-color="#F97316" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#accueil">Aller au contenu</a>
+    <main>
+    <section class="opening scene" id="intro" aria-label="Maïlys Solutions">
+      <!-- Preserve the original lettering and composition; apply the approved palette without changing the source PNG. -->
+      <svg class="logo" viewBox="157 125 1389 387" role="img" aria-labelledby="logo-title">
+        <title id="logo-title">Maïlys Solutions</title>
+        <image href="outputs/assets/logo-mailys-original.png" width="2080" height="640" filter="url(#brand-ink)" />
+        <rect x="304" y="272" width="240" height="240" fill="url(#brand-warm)" />
+      </svg>
+      <button class="enter" id="enter" type="button">Entrer <span aria-hidden="true">↗</span></button>
+    </section>
+    <div class="destination" id="destination" hidden>
+      <header class="site-header page-width" id="site-header">
+        <a class="brand-link" href="#accueil" aria-label="Maïlys Solutions — accueil">
+          <svg class="small-logo" viewBox="157 125 1389 387" role="img" aria-label="Maïlys Solutions">
+            <image href="outputs/assets/logo-mailys-original.png" width="2080" height="640" filter="url(#brand-ink)" />
+            <rect x="304" y="272" width="240" height="240" fill="url(#brand-warm)" />
+          </svg>
+        </a>
+        <span class="brand-context">TRAJECTOIRE DE MIGRATION <strong>WINDEV → WEB</strong></span>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="mobile-nav-label">Menu</span>
+          <span class="mobile-nav-icon" aria-hidden="true"><span></span><span></span></span>
+        </button>
+        <nav id="primary-nav" aria-label="Navigation principale">
+          <a href="#accompagnement"><span class="nav-index">01</span><span>Les risques</span></a>
+          <a href="#methode"><span class="nav-index">02</span><span>La méthode</span></a>
+          <a href="#mailys"><span class="nav-index">03</span><span>Maïlys</span></a>
+          <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+      <div class="screen-stage" id="screen-stage">
+      <section class="screen hero page-width" id="accueil" aria-labelledby="headline" tabindex="-1" data-title="Accueil">
+        <div class="hero-copy">
+          <p class="eyebrow">Trajectoire de migration</p>
+          <h1 id="headline">Sortir de WINDEV<br /><span class="gradient-text">sans perdre la maîtrise.</span></h1>
+          <p class="hero-description">Le contexte éditeur a changé, et la question d’une sortie de WINDEV se pose désormais en comité. Une migration se pilote avant de se coder : patrimoine cartographié, scénarios chiffrés du plus sécurisé au plus tendu, décision prise en gouvernance. Le projet démarre sur un arbitrage, pas sur une intuition.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#contact">Prendre rendez-vous <span aria-hidden="true">↗</span></a>
+            <a class="button-secondary" href="#methode">Découvrir la méthode TEMPO <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-symbol" aria-hidden="true"><span class="symbol-outline"></span><span class="symbol-fill"></span></div>
+        <a class="hero-next" href="#accompagnement"><span>Du cadrage à la mise en production</span><span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="screen content-section failure-section page-width" id="accompagnement" aria-labelledby="failure-title" tabindex="-1" data-title="Ce qui déraille" hidden>
+        <div class="section-heading">
+          <p class="eyebrow"><span class="section-number">01</span> Ce qui fait dérailler une migration</p>
+          <div>
+            <h2 id="failure-title">Une migration ne se perd pas dans le code.<br /><span class="gradient-text">Elle se perd avant.</span></h2>
+            <p class="failure-intro">Les projets de sortie de WINDEV qui dérapent partagent rarement une cause technique. Ils partagent une absence de cadre au moment où tout se décide.</p>
+          </div>
+        </div>
+        <div class="failure-grid">
+          <article class="failure-card">
+            <span class="offer-number" aria-hidden="true">01</span>
+            <h3>Chiffrer avant de cartographier</h3>
+            <p>Un devis global posé sur un patrimoine que personne n’a pesé module par module. Le budget devient une croyance, et chaque écart une surprise.</p>
+          </article>
+          <article class="failure-card">
+            <span class="offer-number" aria-hidden="true">02</span>
+            <h3>Commencer par le module le plus simple</h3>
+            <p>Le premier module migré rassure, puis le deuxième révèle tout ce que le premier avait caché. L’étalon doit être représentatif, pas confortable.</p>
+          </article>
+          <article class="failure-card">
+            <span class="offer-number" aria-hidden="true">03</span>
+            <h3>Confondre reproduire et refondre</h3>
+            <p>Sans arbitrage explicite sur ce qui est renforcé, repoussé ou retiré, l’application cible hérite de vingt ans de règles que plus personne ne sait justifier.</p>
+          </article>
+          <article class="failure-card">
+            <span class="offer-number" aria-hidden="true">04</span>
+            <h3>Laisser le pilotage à l’exécutant</h3>
+            <p>Quand celui qui réalise est aussi celui qui rend compte, la gouvernance découvre les écarts à la livraison. Le pilotage est un rôle à part entière, avec un canal unique et un point écrit chaque semaine.</p>
+          </article>
+        </div>
+        <aside class="failure-note">Rester, partir ou partir plus tard : les trois options sont légitimes. Aucune ne se décide sans cartographie.</aside>
+      </section>
+
+      <section class="screen content-section page-width" id="methode" aria-labelledby="method-title" tabindex="-1" data-title="Méthode" hidden>
+        <div class="section-heading method-heading">
+          <p class="eyebrow"><span class="section-number">02</span> La méthode</p>
+          <h2 id="method-title" class="tempo-title gradient-text">TEMPO.</h2>
+        </div>
+        <ol class="method-steps">
+          <li><span class="step-letter" aria-hidden="true">T</span><h3>Terrain</h3><p>Identifier les modules et leurs dépendances.</p></li>
+          <li><span class="step-letter" aria-hidden="true">E</span><h3>Évaluation</h3><p>Mesurer la complexité et les risques.</p></li>
+          <li><span class="step-letter" aria-hidden="true">M</span><h3>Modélisation</h3><p>Chiffrer et séquencer la migration.</p></li>
+          <li><span class="step-letter" aria-hidden="true">P</span><h3>Pilotage</h3><p>Suivre les livraisons et les écarts.</p></li>
+          <li><span class="step-letter" aria-hidden="true">O</span><h3>Orientation</h3><p>Renforcer, repousser ou retirer.</p></li>
+        </ol>
+      </section>
+
+      <section class="screen content-section about page-width" id="mailys" aria-labelledby="about-title" tabindex="-1" data-title="Maïlys" hidden>
+        <div class="section-heading">
+          <p class="eyebrow"><span class="section-number">03</span> Maïlys</p>
+          <h2 id="about-title">Maïlys<br />Condamy.</h2>
+          <p class="about-role">Pilote de migration · Montpellier</p>
+        </div>
+        <div class="about-copy">
+          <p class="about-lead">Une migration se pilote<br />avant de se coder.</p>
+          <p>Cinq ans dans l’écosystème WINDEV, côté développement et commercial.</p>
+          <p>Un seul interlocuteur, du cadrage à la mise en production.</p>
+        </div>
+      </section>
+
+      <section class="screen contact-section page-width" id="contact" aria-labelledby="contact-title" tabindex="-1" data-title="Contact" hidden>
+        <p class="eyebrow"><span class="section-number">04</span> Contact</p>
+        <h2 id="contact-title">Parlons<br /><span class="gradient-text">du projet.</span></h2>
+        <div class="contact-bottom">
+          <p>Précadrage et cadrage<br />du module pilote offerts.</p>
+          <span class="contact-location">Montpellier · Toute la France</span>
+        </div>
+      </section>
+      </div>
+      <footer class="site-footer page-width">
+        <span class="screen-label" id="screen-label">Accueil</span>
+        <button class="replay" id="play" type="button">Revoir l’ouverture <span aria-hidden="true">↺</span></button>
+        <nav class="screen-controls" aria-label="Navigation entre les sections">
+          <button id="previous-screen" type="button" aria-label="Section précédente" disabled><span aria-hidden="true">←</span></button>
+          <span class="screen-count" id="screen-count" aria-label="Écran 1 sur 5">01 / 05</span>
+          <button id="next-screen" type="button" aria-label="Section suivante"><span aria-hidden="true">→</span></button>
+        </nav>
+      </footer>
+    </div>
+    </main>
+    <canvas id="transition" aria-hidden="true"></canvas>
+    <p id="transition-status" class="sr-only" role="status"></p>
+  </body>
+</html>

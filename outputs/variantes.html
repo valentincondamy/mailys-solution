@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f0eeeb" />
+    <title>Maïlys Solutions — Variantes d’ouverture</title>
+    <link rel="stylesheet" href="variantes.css" />
+  </head>
+  <body>
+    <main class="review">
+      <header class="review-head">
+        <div><p class="eyebrow">MAÏLYS SOLUTIONS / ÉTUDES D’OUVERTURE</p><h1>Quatre façons d’entrer.</h1></div>
+        <div class="review-tools">
+          <div class="theme-switch" role="group" aria-label="Fond des compositions">
+            <button type="button" data-theme-choice="light" aria-pressed="true">Fond clair</button>
+            <button type="button" data-theme-choice="dark" aria-pressed="false">Fond noir</button>
+          </div>
+          <div class="theme-switch" role="group" aria-label="Palette des carrés">
+            <button type="button" data-palette-choice="orange" aria-pressed="false">Orange</button>
+            <button type="button" data-palette-choice="rose-orange" aria-pressed="true">Rose → orange</button>
+          </div>
+          <a class="original-link" href="../">Voir le logo original ↗</a>
+        </div>
+      </header>
+      <div class="studies" id="studies"></div>
+      <footer class="review-foot"><span id="theme-note">Fond clair · lettrage noir · rose & orange</span><span>Compositions fixes — cliquez pour agrandir.</span></footer>
+    </main>
+    <dialog class="viewer" aria-labelledby="viewer-title">
+      <header class="viewer-head"><span id="viewer-title"></span><button type="button" class="close" aria-label="Fermer l’aperçu">Fermer <span aria-hidden="true">×</span></button></header>
+      <div id="viewer-art" class="viewer-art"></div>
+      <footer class="viewer-foot"><div class="choices" aria-label="Choisir une variante"></div><p id="viewer-note"></p></footer>
+    </dialog>
+    <script src="variantes.js"></script>
+  </body>
+</html>

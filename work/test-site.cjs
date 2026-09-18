@@ -1,0 +1,17 @@
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+const html = fs.readFileSync('index.html', 'utf8');
+const css = fs.readFileSync('styles.css', 'utf8');
+const script = fs.readFileSync('script.js', 'utf8');
+const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+assert.equal(ids.length,new Set(ids).size,'Unique section and SVG identifiers');
+for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.includes(match[1]),`Valid anchor: ${match[1]}`);
+for (const section of ['accueil','accompagnement','methode','mailys','contact']) assert.ok(html.includes(`id="${section}"`));
+assert.equal((html.match(/<h1\b/g)||[]).length,1);
+assert.equal((html.match(/class="screen /g)||[]).length,5,'Five fixed screens');
+assert.ok(!/scrollIntoView|scrollTo|scroll-behavior:\s*smooth|scroll-snap/.test(script+css),'No scrolling navigation');
+assert.ok(css.includes('height: 100dvh'),'Dynamic viewport height');
+for (const match of html.matchAll(/(?:src|href)="(?!#|mailto:)([^"?]+)(?:\?[^"]*)?"/g)) assert.ok(fs.existsSync(match[1]),`Existing local asset: ${match[1]}`);
+assert.ok(!/#5b0f1a|var\(--bordeaux\)/i.test(css+script),'No burgundy in the active design');
+for (const match of html.matchAll(/href="mailto:([^"?]+)(?:\?[^"]*)?"/g)) assert.ok(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(match[1]),'Valid contact email');
+console.log('PASS site: sections, hierarchy, anchors, local assets, palette and email syntax');
