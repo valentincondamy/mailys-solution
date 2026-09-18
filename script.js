@@ -3,6 +3,9 @@ const canvas = document.querySelector('#transition');
 const ctx = canvas.getContext('2d');
 const transitionLogo = new Image();
 transitionLogo.src = 'outputs/assets/logo-mailys-original.png';
+// The source PNG includes transparent padding around the mark. Keep the
+// visible logo bounds so the wordmark is optically centered in the transition.
+const logoCrop = { x: 157, y: 125, width: 1389, height: 387 };
 let logoReady = transitionLogo.complete && transitionLogo.naturalWidth > 0;
 let pendingTransition = null;
 transitionLogo.addEventListener('load', () => {
@@ -169,7 +172,7 @@ function finish() {
 function drawTransitionLogo() {
   if (!transitionLogo.complete || transitionLogo.naturalWidth === 0) return;
   const logoWidth = Math.min(560, width * .68);
-  const logoHeight = logoWidth * transitionLogo.naturalHeight / transitionLogo.naturalWidth;
+  const logoHeight = logoWidth * logoCrop.height / logoCrop.width;
   const x = (width - logoWidth) / 2;
   const y = (height - logoHeight) / 2;
 
@@ -187,7 +190,11 @@ function drawTransitionLogo() {
     ctx.rect(tile.drawX, tile.drawY, tile.side, tile.side);
     ctx.clip();
     ctx.globalAlpha = Math.min(1, tile.side / (tile.size * .38));
-    ctx.drawImage(transitionLogo, x, y, logoWidth, logoHeight);
+    ctx.drawImage(
+      transitionLogo,
+      logoCrop.x, logoCrop.y, logoCrop.width, logoCrop.height,
+      x, y, logoWidth, logoHeight,
+    );
     ctx.restore();
   }
   ctx.restore();
@@ -196,11 +203,15 @@ function drawTransitionLogo() {
 function drawTransitionLogoFull() {
   if (!transitionLogo.complete || transitionLogo.naturalWidth === 0) return;
   const logoWidth = Math.min(560, width * .68);
-  const logoHeight = logoWidth * transitionLogo.naturalHeight / transitionLogo.naturalWidth;
+  const logoHeight = logoWidth * logoCrop.height / logoCrop.width;
   ctx.save();
   ctx.filter = 'brightness(0) invert(1)';
   ctx.globalAlpha = .96;
-  ctx.drawImage(transitionLogo, (width - logoWidth) / 2, (height - logoHeight) / 2, logoWidth, logoHeight);
+  ctx.drawImage(
+    transitionLogo,
+    logoCrop.x, logoCrop.y, logoCrop.width, logoCrop.height,
+    (width - logoWidth) / 2, (height - logoHeight) / 2, logoWidth, logoHeight,
+  );
   ctx.restore();
 }
 
