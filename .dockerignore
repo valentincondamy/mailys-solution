@@ -1,0 +1,5 @@
+.git
+.qodo
+work
+node_modules
+*.log
